@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>mykoreanmovies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+*{
+	margin: 0px;
+	font-family: arial;
+	scroll-behavior: smooth;
+}
+/*beginning of nav */
+#nav-bar{
+	background-color: #000000;
+	height: 40px;
+	width: 100%;
+	color: #ffffff;
+	position: fixed;
+	z-index: 3;
+}
+#nav-ul{
+	list-style: none;
+	float: right;
+}
+.nav-li{
+	display: inline-block;
+	margin: 10px 20px 0px 0px;
+}
+.nav-li a{
+	color: #ffffff;
+	text-decoration: none;
+}
+.nav-li a:hover, active{
+	text-decoration: underline;
+}
+#logo{
+	font-weight: bold;
+	line-height: 40px;
+	margin-left: 20px;
+}
+#logo a{
+	text-decoration: none;
+	color: #ffffff;
+}
+#search-button{
+	margin-right: 60px;
+	cursor: pointer;
+}
+@media (max-width: 700px){
+	input{
+		display: none;
+	}
+}
+@media(max-width: 340px){
+	.nav-li{
+		font-size: 15px;
+		margin: 10px 15px 0px 0px;
+	}
+	#logo{
+		display: none;
+	}
+}
+/*end of nav*/
+/*beginning of home section */
+#home-all{
+	height: 100vh;
+	width: 100%;
+	background-color: #03170a;
+	color: white;
+	background-image: url(http://www.kdramalove.com/galleries/iu___lee_ji_eun_____render___png__16_by_mhsasa-d6c71cl.png);
+	background-repeat: no-repeat;
+	
+	background-size: cover;
+}
+#home-text{
+	/*border: 2px solid red;*/
+	width: 60%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+#get_your_favourite{
+	font-size: 5.3vw;
+	font-family: monospace;
+}
+#korean{
+	font-weight: bold;
+	font-size: 7vw;
+	font-style: italic;
+	font-family: lucida calligraphy;
+	color: #c91d1d;
+}
+#movies_here{
+	font-size: 3vw;
+	font-family: monospace;
+}
+@media(max-width: 600px){
+	#home-all{
+		background-image: url(https://kathrynsliving.files.wordpress.com/2014/09/jessica__snsd__png_render_by_classicluv-d6ar50j.png);
+	}
+}
+@media (max-width: 450px){
+	#home-text{
+		width: 100%;
+	}
+	#get_your_favourite{
+	font-size: 6vw;
+	}
+	#movies_here{
+	font-size: 4vw;
+	}
+}
+
+/*end of home section */
+
+/*beginning of top section */
+#container{
+	margin: 0 10px;
+	padding: 20px 0 20px 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 1em;
+	grid-row-gap: 1em;
+	justify-content: center;
+}
+.iframe-div{
+	background-color: black;
+	display: grid;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	height:0;
+	padding-bottom: 56.25%;
+}
+.iframe-div iframe{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+.iframe-div p a{
+	text-decoration: none;
+}
+.iframe-div p a:hover{
+	text-decoration: underline;
+}
+button{
+	background-color: #08810c;
+	color: white;
+	border: none;
+	border-radius: 10px;
+	padding: 10px 15px 10px 15px;
+	cursor: pointer;
+	width: 90px;
+}
+button:hover{
+	background-color: #02bb08;
+}
+#next{
+	text-align: right;
+	margin-right: 20px;
+}
+
+@media (max-width: 600px){
+	#container{
+		display: grid;
+		grid-template-columns: 1fr;
+		margin: 0 10px;
+	}
+}
+/*end of top section*/
+#categories{
+	width: 100%;
+	height: 50%;
+	background-color: #03170a;
+}
+#cat-all{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr ;
+}
+.cat-text{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	text-align: center;
+}
+.cat-p a{
+	color: #ffffff;
+	text-decoration: none;
+}
+.cat-p a:hover{
+	text-decoration: underline;
+}
+.ending-p{
+	font-size: 18px;
+	color: white;
+	text-align: center;
+}
+.ending-p a{
+	color: #ffffff;
+	text-decoration: none;
+}
+.ending-p a:hover{
+	text-decoration: underline;
+}
+@media (max-width: 385px){
+	.cat-text{
+		font-size: 12px;
+	}
+	.ending-p{
+		font-size: 14px;
+	}
+}
+	</style>
+</head>
+<body>
+	<!-- beginnining of nav-->
+	<nav id = "nav-bar">
+		<label id = "logo"><a href="#home">MKM</a></label>
+		<ul id = "nav-ul">
+			<input type="text" name="text" placeholder ="Search">
+			<input type="submit" name="submit" value = "Search" id = "search-button">
+			<li class = "nav-li"><a href="#home" class="nav-link">Home</a></li>
+			<li class = "nav-li"><a href="#top" class="nav-link">Top</a></li>
+			<li class = "nav-li"><a href="#categories" class="nav-link">Categories</a></li>
+		</ul>
+	</nav>
+	<!--end of nav -->
+
+	<!--beginning of home section -->
+	<section id = "home">
+		<div id = "home-all">
+			<div id ="home-text">
+				<p id = "get_your_favourite">Get your favourite</p>
+				<p id = "korean">Korean</p>
+				<p id = "movies_here">movies here!</p>
+			</div>
+		</div>
+	</section>
+	<!-- end of home section -->
+
+	<!-- beginning of top section -->
+	<section id = "top">
+		<div id = "container">
+			<div>
+				<div  class = "iframe-div">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dZYAtf06lRE" title="YouTube video player" frameborder="0	" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt = "	The princess and the match maker"></iframe>
+				</div>
+				<p><a href="#">The Princess and the Matchmaker</a></p>
+				<button>Download</button>
+			</div>
+			<div>
+				<div  class = "iframe-div">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dZYAtf06lRE" title="YouTube video player" frameborder="0	" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt = "	The princess and the match maker"></iframe>
+				</div>
+				<p><a href="#">The Princess and the Matchmaker</a></p>
+				<button>Download</button>
+			</div>
+			<div>
+				<div  class = "iframe-div">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dZYAtf06lRE" title="YouTube video player" frameborder="0	" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt = "	The princess and the match maker"></iframe>
+				</div>
+				<p><a href="#">The Princess and the Matchmaker</a></p>
+				<button>Download</button>
+			</div>
+			<div>
+				<div  class = "iframe-div">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dZYAtf06lRE" title="YouTube video player" frameborder="0	" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt = "	The princess and the match maker"></iframe>
+				</div>
+				<p><a href="#">The Princess and the Matchmaker</a></p>
+				<button>Download</button>
+			</div>
+			<div>
+				<div  class = "iframe-div">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dZYAtf06lRE" title="YouTube video player" frameborder="0	" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt = "	The princess and the match maker"></iframe>
+				</div>
+				<p><a href="#">The Princess and the Matchmaker</a></p>
+				<button>Download</button>
+			</div>
+			<div>
+				<div  class = "iframe-div">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/dZYAtf06lRE" title="YouTube video player" frameborder="0	" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen alt = "	The princess and the match maker"></iframe>
+				</div>
+				<p><a href="#">The Princess and the Matchmaker</a></p>
+				<button>Download</button>
+			</div>
+		</div>
+		<p id="next"><a href="#">Next</a><p>
+	</section>
+	<!-- end of top section -->
+
+	<!-- beginning of categories section -->
+	<section id = "categories">
+		<div id = "cat-all">
+			<div class ="cat-text">
+				<p class="cat-p"><a href="#">Love</a></p>
+				<p class="cat-p"><a href="#">Romance</a></p>
+				<p class="cat-p"><a href="#">High School</a></p>
+				<p class="cat-p"><a href="#">King</a></p>
+				<p class="cat-p"><a href="#">Queen</a></p>
+				<p class="cat-p"><a href="#">Action</a></p>
+				<p class="cat-p"><a href="#">Kingdom</a></p>
+				<p class="cat-p"><a href="#">Chris</a></p>
+				<p class="cat-p"><a href="#">Love</a></p>
+				<p class="cat-p"><a href="#">Romance</a></p>
+				<p class="cat-p"><a href="#">High School</a></p>
+				<p class="cat-p"><a href="#">King</a></p>
+			</div>
+			<div class="cat-text">
+				<p class="cat-p"><a href="#">Comedy</a></p>
+				<p class="cat-p"><a href="#">Love</a></p>
+				<p class="cat-p"><a href="#">Itaewon class</a></p>
+				<p class="cat-p"><a href="#">Mr Queen</a></p>
+				<p class="cat-p"><a href="#">Emma</a></p>
+				<p class="cat-p"><a href="#">Creativity</a></p>
+				<p class="cat-p"><a href="#">Website</a></p>
+				<p class="cat-p"><a href="#">Love</a></p>
+				<p class="cat-p"><a href="#">Romance</a></p>
+				<p class="cat-p"><a href="#">High School</a></p>
+				<p class="cat-p"><a href="#">King</a></p>
+			</div>
+			<div class ="cat-text">
+				<p class="cat-p"><a href="#">Love</a></p>
+				<p class="cat-p"><a href="#">Romance</a></p>
+				<p class="cat-p"><a href="#">High School</a></p>
+				<p class="cat-p"><a href="#">King</a></p>
+				<p class="cat-p"><a href="#">Queen</a></p>
+				<p class="cat-p"><a href="#">Action</a></p>
+				<p class="cat-p"><a href="#">Kingdom</a></p>
+				<p class="cat-p"><a href="#">Chris</a></p>
+				<p class="cat-p"><a href="#">Love</a></p>
+				<p class="cat-p"><a href="#">Romance</a></p>
+				
+			</div>
+		</div>
+		<p class = "ending-p">&copy Ezeigbo Emmanuel</p>
+		<p class = "ending-p"><a href="#">Contact me!</a></p>
+		<p class="ending-p">09038898018, 08143260435</p>
+	</section>
+	<!-- beginning of categories section -->
+
+</body>
+</html>
