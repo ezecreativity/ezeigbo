@@ -1,0 +1,90 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#main{
+	/*background-color: red;*/
+	height: 633px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: tahoma;
+}
+.bookmarks{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: lightgrey;
+	border-radius: 50%;
+	margin: 0 20px 0 20px;
+}
+
+.google{
+	display: inline-block;
+	font-size: 6rem;
+	font-weight: 300;
+	padding-bottom: 50px;
+}
+input{
+	width: 500px;
+	height: 40px;
+	border-radius: 100px;
+	border: none;
+	margin-bottom: 25px;
+	padding: 0 40px 0 40px;
+	outline: none;
+	font-size: 16px;
+	box-shadow: 0 0 8px lightgrey;
+}
+#search-div{
+	position: relative;
+}
+#search-div #search{
+	position: absolute;
+	left: 15px;
+    top: 13px;
+    color: grey;
+}
+#search-div #mic{
+	position: absolute;
+	top: 13px;
+	right: 15px;
+}
+.downbook{
+	width: 60px;
+	height: 10px;
+	background-color: lightgrey;
+	display: inline-block;
+	margin: 0 10px 0 10px;
+}
+
+@media (max-width: 615px){
+	.google{
+		font-size: 3rem;
+	}
+	input{
+		width: 300px;
+	}
+}
+@media (max-width: 420px){
+	input{
+		width: 200px;
+		font-size: 12px;
+	}
+	.bookmarks{
+	width: 30px;
+	height: 30px;
+	margin: 0 15px 0 15px;		
+	}
+	.downbook{
+	width: 40px;
+	height: 10px;
+	}
+}
+@media(max-width: 320px){
+	.bookmarks, .downbook{
+		display: none;
+	}
+}
