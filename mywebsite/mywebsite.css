@@ -1,0 +1,260 @@
+	*{
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+/*nav bar beginning */
+#navbar{
+  margin: 0;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  background-color: black;
+  width: 100%;
+}
+
+#navbar ul{
+  list-style: none;
+}
+
+#navbar li{
+  float: left;
+}
+
+#navbar li a{
+  font-family: 'Open Sans', sans-serif; 
+  padding: 14px 16px;
+  font-size: 19px;
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+#navbar li a:hover{
+  text-decoration: underline;
+}
+
+#logo{
+  font-family: 'Original Surfer', cursive;
+  padding-right: 20px;
+  line-height: 50px;
+  color: white;
+  font-size: 2.5rem;
+}
+
+@media (max-width: 600px){
+  #navbar li a{
+    font-size: 14px;
+    padding: 10px 5px;
+  }
+  #logo{
+    display: none;
+  }
+}
+/* nav bar ending */
+
+#welcome-section{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: black;
+  background: url(https://wallpaperaccess.com/full/329343.jpg);
+  color: white;
+}
+
+#welcome-section h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 6rem;
+}
+
+#welcome-section p{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 3rem;
+}
+
+@media (max-width: 800px){
+  #welcome-section h1{
+    font-size: 2.5rem;
+  }
+  #welcome-section p{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 600px){
+  #welcome-section h1{
+    font-size: 1.8rem;
+  }
+  #welcome-section p{
+    font-size: 1rem;
+  }
+}
+/*end of welcome section */
+
+#projects{
+  background: url(https://wallpaperaccess.com/full/983279.jpg);
+  padding-bottom: 40px;
+}
+
+.project-tile{
+  display: grid;
+  grid-template-areas: 'grid1 grid2'
+                        'grid3 grid4';
+  grid-gap: 3em;
+  grid-auto-flow: row;
+  justify-content: center;
+}
+
+.project-pic{
+  width: 400px;
+}
+
+#grid1{
+  grid-area: grid1;
+}
+#grid2{
+  grid-area: grid2;
+}
+
+#grid3{
+  grid-area: grid3;
+}
+
+#grid4{
+  grid-area: grid4;
+}
+
+#projects h3{
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  padding: 16px 0;
+}
+
+.griditem{
+  width: 100%;
+  background-color: black;
+}
+
+.griditem a, p{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 16px 0;
+}
+
+@media (max-width: 900px){
+  .project-tile{
+    width: 100%;
+    grid-template-areas:  'grid1'
+                          'grid2'
+                          'grid3'
+                          'grid4'
+  }
+  .project-pic{
+    width: 350px;
+  }
+}
+/* end of projects */
+
+#contact{
+  background: url(https://p4.wallpaperbetter.com/wallpaper/562/835/617/dark-blue-night-gradation-wallpaper-preview.jpg);
+  color: white;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact h2{
+  font-family: 'Source Code Pro', monospace;
+  text-align: center;
+  font-size: 3rem;
+  padding: 26px 0;
+}
+
+#email{
+  height: 40px;
+  font-size: 19px;
+}
+
+.input{
+  display: block;
+}
+
+textarea{
+  margin-top: 10px;
+  width: auto;
+  font-size: 18px;
+}
+
+#submit{
+  color: white;
+  background-color: black;
+  padding: 15px 18px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+}
+
+#contact h3{
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Open Sans', sans-serif; 
+  padding: 20px 0;
+}
+
+#link-wrapper{
+  display: grid;
+  justify-content: center;
+  font-size: 2rem;
+  grid-template-columns: auto auto auto;
+  grid-gap: 2em;
+  padding-bottom: 40px;
+}
+
+#link-wrapper a{
+  color: white;
+}
+
+@media (max-width: 704px){
+  #contact h2{
+    font-size: 2rem;
+  }
+  form{
+    justify-content: left;
+  }
+  #link-wrapper{
+    font-size: 1.5rem;
+    grid-template-columns: auto;
+    grid-gap: 15px;
+  }
+}
+@media (max-width: 600px){
+  #contact h2{
+    font-size: 1.5rem;
+  }
+  #comment{
+    width: 250px;
+    height: 100px;
+  }
+  #email{
+    height: 32px;
+    font-size: 16px;
+  }
+}
