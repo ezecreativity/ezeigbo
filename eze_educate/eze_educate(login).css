@@ -63,16 +63,25 @@ h1{
 
 @media(max-width: 495px){
     h1{
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
     label{
-        font-size: 12px;
+        font-size: 15px;
     }
     .input{
-        font-size: 10px;
+        font-size: 14px;
         margin-left: 10px;
+        width: 80%;
     }
     button{
-        width: 26%;
+        width: 28%;
+        border-radius: 10px;
+    }
+    .main{
+        height: 600px;
+        margin: 25px 5px;
+    }
+    .form{
+        margin-left: 10px;
     }
 }
